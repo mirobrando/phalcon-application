@@ -1,0 +1,14 @@
+.idea
+.phalocn
+.tmp
+vendor
+public/bower_components
+public/deploy
+public/css/*
+public/js/*
+public/views/*
+public/img/*
+config/config.yml
+node_modules
+bin
+common/cache/*

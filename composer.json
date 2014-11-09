@@ -1,0 +1,37 @@
+{
+    "name": "mlphalcon/application",
+    "description": "app based on phalcon",
+    "authors": [
+        {
+            "name": "mirobrando",
+            "email": "mirobrando@wp.pl"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "mirolabs/ng-phalcon": "dev-master",
+        "mirolabs/module-cache": "0.1.4",
+        "mirolabs/ng-event": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/mirobrando/ng-phalcon.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/mirobrando/module-cache.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/mirobrando/ng-event.git"
+        }
+    ],
+    "minimum-stability": "dev",
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": { "": "modules/" }
+    }
+}
