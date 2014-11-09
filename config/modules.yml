@@ -2,3 +2,11 @@
 #moduleName:
 #  className: moduleName\Module
 #  path: modules/moduleName/Module.php
+
+cache:
+  className: mirolabs\phalcon\modules\ngEvent\Module
+  path: vendor/mirolabs/ng-event/src/Module.php
+
+cache:
+  className: mirolabs\phalcon\modules\cache\Module
+  path: vendor/mirolabs/module-cache/src/mirolabs/phalcon/modules/cache/Module.php
