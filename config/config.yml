@@ -1,0 +1,18 @@
+#config.yml
+
+ng.app.name: ng-phalcon
+
+default.lang: en
+
+database:
+  host: localhost
+  username: root
+  password:
+  dbname: phalcon
+
+view:
+  compiledPath: /tmp/
+  compiledExtension: .compiled
+  compiledSeparator: %%
+  stat: true
+  compileAlways: true
