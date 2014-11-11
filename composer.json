@@ -32,11 +32,10 @@
         "bin-dir": "bin"
     },
     "scripts": {
-        "post-root-package-install": [
-            "mirolabs\\phalcon\\Framework\\Install::createProject"
-        ],
         "post-create-project-cmd": [
+            "mirolabs\\phalcon\\Framework\\Install::createProject",
             "bower install",
+            "chmod 777 common/cache",
             "php common/cli.php installResources"
         ]
 
