@@ -32,9 +32,14 @@
         "bin-dir": "bin"
     },
     "scripts": {
-        "post-create-project-cmd": [
+        "post-root-package-install": [
             "mirolabs\\phalcon\\Framework\\Install::createProject"
+        ],
+        "post-create-project-cmd": [
+            "bower install",
+            "php common/cli.php installResources"
         ]
+
     },
     "autoload": {
         "psr-0": { "": "modules/" }

@@ -19,6 +19,11 @@
 
     <body ng-app="{{ ngAppName }}">
 
+        <div ng-show="def.show">
+            {% block content %}{% endblock %}
+        </div>
+        <div ng-view="" ng-show="!def.show"></div>
+
         <script>
             var language='{{ lang() }}';
             var ngAppName='{{ ngAppName }}';
@@ -58,6 +63,7 @@
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="/js/common/app.js"></script>
         <!-- endbuild -->
     </body>
 </html>
