@@ -9,7 +9,7 @@
     ],
     "require": {
         "php": ">=5.4",
-        "mirolabs/ng-phalcon": "dev-master",
+        "mirolabs/ng-phalcon": "dev-develop",
         "mirolabs/module-cache": "0.1.4",
         "mirolabs/ng-event": "dev-master"
     },
@@ -17,7 +17,6 @@
         {
             "type": "git",
             "url": "https://github.com/mirobrando/ng-phalcon.git",
-            "reference": "develop"
         },
         {
             "type": "git",
