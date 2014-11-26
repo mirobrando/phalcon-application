@@ -1,4 +1,5 @@
 <?php
 
-    $messages = [
+    return [
+        'title' => 'phalcon application'
     ];

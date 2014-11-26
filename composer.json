@@ -16,7 +16,8 @@
     "repositories": [
         {
             "type": "git",
-            "url": "https://github.com/mirobrando/ng-phalcon.git"
+            "url": "https://github.com/mirobrando/ng-phalcon.git",
+            "reference": "develop"
         },
         {
             "type": "git",
