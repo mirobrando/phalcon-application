@@ -10,7 +10,7 @@
     "require": {
         "php": ">=5.4",
         "mirolabs/ng-phalcon": "dev-develop",
-        "mirolabs/module-cache": "0.1.4",
+        "mirolabs/module-cache": "0.1.6",
         "mirolabs/ng-event": "dev-master"
     },
     "repositories": [
