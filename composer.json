@@ -36,7 +36,8 @@
             "mirolabs\\phalcon\\Framework\\Install::createProject",
             "bower install",
             "chmod 777 common/cache",
-            "php common/cli.php installResources"
+            "php common/cli.php installResources",
+            "chmod 777 -R common/cache"
         ]
 
     },
