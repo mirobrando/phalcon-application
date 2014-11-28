@@ -3,7 +3,7 @@
 #  className: moduleName\Module
 #  path: modules/moduleName/Module.php
 
-cache:
+ngEvent:
   className: mirolabs\phalcon\modules\ngEvent\Module
   path: vendor/mirolabs/ng-event/src/Module.php
 
