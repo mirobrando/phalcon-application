@@ -1,14 +1,15 @@
 .idea
 .phalocn
-.tmp
 vendor
+public/.tmp
 public/bower_components
 public/deploy
 public/css/*
 public/js/*
 public/views/*
 public/img/*
+public/node_modules
 config/config.yml
-node_modules
 bin
 common/cache/*
+common/views/index_deploy.volt

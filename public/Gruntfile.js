@@ -9,9 +9,9 @@ module.exports = function (grunt) {
     grunt.initConfig({
 
         dir: {
-            deploy: 'public/deploy',
-            views: 'common/views',
-            app: 'public'
+            deploy: 'deploy',
+            views: '../common/views',
+            app: '.'
         },
 
         gruntfile: {
@@ -39,16 +39,54 @@ module.exports = function (grunt) {
                     html: {
                         steps: {
                             js: ['concat', 'uglifyjs'],
-                            css: ['cssmin']
+                            css: ['concat', 'cssmin']
                         },
-                        post: {}
+                        post: {
+                        }
                     }
                 }
             }
         },
 
+        uglify: {
+            generated: {
+                files: [
+                    {
+                        dest: '<%= dir.deploy %>/scripts/scripts.js',
+                        src: ['.tmp/concat/deploy/scripts/scripts.js']
+                    },
+                    {
+                        dest: '<%= dir.deploy %>/scripts/vendor.js',
+                        src: ['.tmp/concat/deploy/scripts/vendor.js']
+                    },
+                    {
+                        dest: '<%= dir.deploy %>/scripts/oldieshim.js',
+                        src: ['.tmp/concat/deploy/scripts/oldieshim.js']
+                    }
+                ]
+            }
+        },
+
+        cssmin: {
+            options: {
+                root: '<%= dir.app %>'
+            },
+            generated: {
+                files: [
+                    {
+                        dest: 'deploy/styles/vendor.css',
+                        src: [ '.tmp/concat/deploy/styles/vendor.css' ]
+                    },
+                    {
+                        dest: 'deploy/styles/main.css',
+                        src: [ '.tmp/concat/deploy/styles/main.css' ]
+                    }
+                ]
+            }
+        },
+
         usemin: {
-            html: ['<%= dir.views %>/{,*/}*.volt'],
+            html: ['<%= dir.views %>/index_deploy.volt'],
             options: {
                 assetsDirs: ['<%= dir.deploy %>']
             }
@@ -56,26 +94,28 @@ module.exports = function (grunt) {
 
         copy: {
             deploy: {
-                files: [{
-                    expand: true,
-                    dot: true,
-                    cwd: '<%= dir.app %>',
-                    dest: '<%= dir.deploy %>',
-                    src: [
-                        'views/{,*/}*.html',
-                        'img/{,*/}*.{webp}',
-                    ]
-                }, {
-                    expand: true,
-                    cwd: '.tmp/img',
-                    dest: '<%= dir.deploy %>/img',
-                    src: ['generated/*']
-                }, {
-                    expand: true,
-                    cwd: '<%= dir.views %>',
-                    dest: '<%= dir.deploy %>',
-                    src: ['*.volt']
-                }
+                files: [
+                    {
+                        expand: true,
+                        dot: true,
+                        cwd: '<%= dir.app %>',
+                        dest: '<%= dir.deploy %>',
+                        src: [
+                            'views/{,*/}*.html',
+                            'img/{,*/}*.{webp}'
+                        ]
+                    },
+                    {
+                        expand: true,
+                        cwd: '.tmp/img',
+                        dest: '<%= dir.deploy %>/img',
+                        src: ['generated/*']
+                    },
+                    {
+                        expand: false,
+                        src: '<%= dir.views %>/index.volt',
+                        dest: '<%= dir.views %>/index_deploy.volt'
+                    }
                 ]
             }
 
@@ -106,12 +146,6 @@ module.exports = function (grunt) {
             }
         },
 
-        cssmin: {
-            options: {
-                root: '<%= dir.app %>'
-            }
-        },
-
         htmlmin: {
             dist: {
                 options: {
@@ -127,7 +161,7 @@ module.exports = function (grunt) {
                     dest: '<%= dir.deploy %>'
                 }]
             }
-        },
+        }
 
 
 
@@ -146,4 +180,4 @@ module.exports = function (grunt) {
         'usemin',
         'htmlmin'
     ]);
-}
+};
