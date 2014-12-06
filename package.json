@@ -1,5 +1,5 @@
 {
-    "name": "mlphalcon/application",
+    "name": "ngphalcon",
     "version": "1.0.0",
     "main": "Gruntfile.js",
     "dependencies": {},
