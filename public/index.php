@@ -15,9 +15,9 @@ if (!file_exists(__DIR__ . '/' . $_SERVER['REQUEST_URI'])) {
     }
 }
 
-$env = getenv('env')?getenv('env'):\mirolabs\phalcon\Framework\Application::ENVIRONMENT_DEV;
-
 require __DIR__ . '/../vendor/autoload.php';
+
+$env = getenv('env')?getenv('env'):\mirolabs\phalcon\Framework\Application::ENVIRONMENT_DEV;
 
 $app = new \mirolabs\phalcon\Framework\Application(__DIR__ . '/../', $env);
 $app->main();
