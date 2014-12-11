@@ -2,6 +2,7 @@
     "name": "mirolabs/phalcon-app",
     "description": "app based on phalcon",
     "license": "MIT",
+    "type": "project",
     "authors": [
         {
             "name": "mirobrando",

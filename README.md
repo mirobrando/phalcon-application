@@ -1,0 +1,1 @@
+composer.phar create-project mirolabs/phalcon-app path/to/app 0.4.0
