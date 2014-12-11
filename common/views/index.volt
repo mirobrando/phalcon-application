@@ -6,13 +6,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css(.) styles/vendor.css -->
+        <!-- build:css(.) deploy/styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
         <!--<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.css">-->
         <!-- endbower -->
         <!-- endbuild -->
-        <!-- build:css(.tmp) styles/main.css -->
+        <!-- build:css(.tmp) deploy/styles/main.css -->
         <!-- endbuild -->
     </head>
 
@@ -29,14 +29,14 @@
             var ngAppName='{{ ngAppName }}';
         </script>
 
-        <!-- build:js(.) scripts/oldieshim.js -->
+        <!-- build:js(.) deploy/scripts/oldieshim.js -->
         <!--[if lt IE 9]>
         <script src="/bower_components/es5-shim/es5-shim.js"></script>
         <script src="/bower_components/json3/lib/json3.min.js"></script>
         <![endif]-->
         <!-- endbuild -->
 
-        <!-- build:js(.) scripts/vendor.js -->
+        <!-- build:js(.) deploy/scripts/vendor.js -->
         <!-- bower:js -->
         <script src="/bower_components/jquery/dist/jquery.js"></script>
         <script src="/bower_components/angular/angular.js"></script>
@@ -62,7 +62,7 @@
         <!-- endbower -->
         <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <!-- build:js(.) deploy/scripts/scripts.js -->
         <script src="/js/common/app.js"></script>
         <!-- endbuild -->
     </body>

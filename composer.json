@@ -1,6 +1,7 @@
 {
-    "name": "ng-phalcon/application",
+    "name": "mirolabs/phalcon-app",
     "description": "app based on phalcon",
+    "license": "MIT",
     "authors": [
         {
             "name": "mirobrando",
@@ -9,24 +10,10 @@
     ],
     "require": {
         "php": ">=5.4",
-        "mirolabs/ng-phalcon": "dev-develop",
-        "mirolabs/module-cache": "0.1.9",
-        "mirolabs/ng-event": "dev-master"
+        "mirolabs/ng-phalcon": "0.4.0",
+        "mirolabs/module-cache": "0.2.0",
+        "mirolabs/ng-event": "0.9.0"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/mirobrando/ng-phalcon.git"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/mirobrando/module-cache.git"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/mirobrando/ng-event.git"
-        }
-    ],
     "minimum-stability": "dev",
     "config": {
         "bin-dir": "bin"
