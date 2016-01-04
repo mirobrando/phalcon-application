@@ -11,9 +11,8 @@
     ],
     "require": {
         "php": ">=5.4",
-        "mirolabs/ng-phalcon": "0.4.4",
-        "mirolabs/module-cache": "0.2.0",
-        "mirolabs/ng-event": "0.9.2"
+        "mirolabs/ng-phalcon": "dev-master",
+        "mirolabs/ng-event": "dev-master"
     },
     "minimum-stability": "dev",
     "config": {
@@ -21,13 +20,11 @@
     },
     "scripts": {
         "post-create-project-cmd": [
-            "mirolabs\\phalcon\\Framework\\Install::createProject",
+            "mirolabs\\phalcon\\Setup\\Install::createProject",
             "bower install",
-            "chmod 777 common/cache",
             "php common/cli.php installResources",
             "chmod 777 -R common/cache"
         ]
-
     },
     "autoload": {
         "psr-0": { "": "modules/" }

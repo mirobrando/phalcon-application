@@ -18,9 +18,8 @@
 
 
     <body ng-app="{{ ngAppName }}">
-
         <div ng-show="def.show">
-            {% block content %}{% endblock %}
+            {{ content() }}
         </div>
         <div ng-view="" ng-show="!def.show"></div>
 

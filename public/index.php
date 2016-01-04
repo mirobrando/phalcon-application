@@ -19,5 +19,5 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $env = getenv('env')?getenv('env'):\mirolabs\phalcon\Framework\Application::ENVIRONMENT_DEV;
 
-$app = new \mirolabs\phalcon\Framework\Application(__DIR__ . '/../', $env);
+$app = new \mirolabs\phalcon\Framework\App\Web(__DIR__ . '/../', $env);
 $app->main();

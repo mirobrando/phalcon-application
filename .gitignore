@@ -13,3 +13,4 @@ config/config.yml
 bin
 common/cache/*
 common/views/index_deploy.volt
+/nbproject/private/

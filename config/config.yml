@@ -11,8 +11,18 @@ database:
   dbname: phalcon
 
 view:
-  compiledPath: /tmp/
+  compiledPath: /tmp/app/
   compiledExtension: .compiled
-  compiledSeparator: %%
+  compiledSeparator: '%%'
   stat: true
   compileAlways: true
+  
+logger:
+  web:
+    level: 7  
+    adapters:
+      file: '/tmp/app.log'
+  console:  
+    level: 7  
+    adapters:
+      file: '/tmp/console_app.log'
